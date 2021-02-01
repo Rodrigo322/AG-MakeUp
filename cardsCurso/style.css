@@ -21,9 +21,10 @@ body {
     flex-wrap: wrap;
 
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     max-width: 1200px;
     margin: 40px 0;
+    margin-bottom: 200px;
 }
 
 .container .card {
@@ -132,7 +133,6 @@ body {
 
 footer {
     background-color: #111;
-    height: auto;
     width: 100vw;
     color: #fff;
 }

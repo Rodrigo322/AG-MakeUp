@@ -19,10 +19,7 @@ body {
     overflow-x: hidden;
 }
 
-.AGMake {
-    display: flex;
-    flex-direction: column;
-}
+
 nav {
     background: #cf9fa6;
     height: 80px;
@@ -137,11 +134,9 @@ section {
 @media (max-width: 780px) {
     .cards {
         width: 100vw;
-        height: 100vh;
 
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
         align-items: center;
     }
 
@@ -154,9 +149,11 @@ section {
 
 .cards {
     width: 100vw;
-    height: 100vh;
 
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
