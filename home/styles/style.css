@@ -19,7 +19,6 @@ body {
     overflow-x: hidden;
 }
 
-
 nav {
     background: #cf9fa6;
     height: 80px;
@@ -170,6 +169,8 @@ section {
     align-items: center;
     flex-direction: column;
     z-index: 1;
+
+    margin-bottom: 30px;
 }
 
 .container {
@@ -297,63 +298,6 @@ button:hover {
     width: 250px;
     border-color: #b76e79;
 }
-
-.modal-container {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 2000;
-
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-container.mostrar {
-    display: flex;
-}
-/* 
-@keyframes box {
-    from {
-        opacity: 0;
-        transform: translate3d(0, -20px, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-.mostrar .box {
-    animation: box .3s;
-} */
-
-.fechar {
-    position: absolute;
-    top: -7px;
-    right: -7px;
-
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
-    border: 2px solid white;
-    background-color: #b76e79;
-    color: #ffffff;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    cursor: pointer;
-
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
-}
-
-/* FIM CSS CARDS E FORM*/
 
 footer {
     background-color: #111;

@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #232427;
+    /* min-width: 100vw;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/*CSS NAV BAR*/
+nav {
+    background: #cf9fa6;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+img.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,
+a:hover {
+    background: #cf9fa6;
+    transition: 0.5s;
+}
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+@media (max-width: 952px) {
+    img.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #b76e79;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: #cf9fa6;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+/*FIM DE CSS NAV BAR*/
+
+/*CSS DO CARDS CONTANTO*/
+.contato-info {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    max-width: 1200px;
+
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.card {
+    /* background: #2a2b2f;
+    border: 2px solid #1e1f23; */
+
+    position: relative;
+    /* min-width: 320px;
+    height: 200px; */
+
+    width: calc(33% - 20px);
+    height: 200px;
+
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 0 20px;
+    margin: 0 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card-icon {
+    font-size: 28px;
+    background: #ff4584;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+}
+
+.card:hover .card-icon {
+    background: none;
+    color: #ff4584;
+    transform: scale(1.6);
+}
+
+.card p {
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+.card:hover p {
+    max-height: 40px;
+    opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+    .contato-info {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    .card {
+        margin-top: 100px;
+        width: 100%;
+        max-width: 300px;
+        margin: 20px 0;
+    }
+    body {
+        overflow-x: hidden;
+    }
+}
+/*FIM CSS DO CARDS CONTANTO*/
+
+/*CSS FOOTER*/
+footer {
+    background-color: #111;
+    height: auto;
+    width: 100vw;
+    color: #fff;
+}
+
+@media (max-width: 680px) {
+    footer {
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.social {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.social li {
+    margin: 0 10px;
+}
+
+.social a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social a i {
+    font-size: 1.1rem;
+}
+
+.footer-bottom {
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/*FIM CSS FOOTER*/
