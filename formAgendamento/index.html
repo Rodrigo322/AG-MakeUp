@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
 <body>
@@ -16,29 +18,8 @@
         <div class="contentBx">
             <div class="formBx">
                 <h2>Faça seu Agendamento</h2>
-                <form action="">
-                    <!-- <div class="inputBx">
-                        <span>Usuario</span>
-                        <input type="text">
-                    </div>
+                <form action="#">
 
-
-                    <div class="inputBx">
-                        <span>Senha</span>
-                        <input type="password">
-                    </div>
-
-                    <div class="remember">
-                        <label for=""> <input type="checkbox"> Salvar usuario </label>
-                    </div>
-
-                    <div class="inputBx">
-                        <input type="submit" value="Entrar">
-                    </div>
-
-                    <div class="inputBx">
-                        <p>Não possui conta? <a href="">Cadastre-se</a> </p>
-                    </div> -->
                     <div class="inputBx">
                         <span>Nome Completo</span>
                         <input type="password">
@@ -50,7 +31,8 @@
                     </div>
 
                     <div class="inputBx">
-                        <span>Horarios <strong style="color: red; text-transform: uppercase;">não</strong> disponíveis! </span>
+                        <span>Horarios <strong style="color: red; text-transform: uppercase;">não</strong> disponíveis!
+                        </span>
                         <br>
                         <label for=""> <strong style="color: red; text-transform: uppercase;">-14:hrs</strong> </label>
                         <br>
@@ -79,14 +61,41 @@
 
 
                     <div class="inputBx">
-                        <input type="submit" value="Agendar">
+                        <input class="agendar" type="submit" value="Agendar">
                     </div>
 
                 </form>
 
             </div>
         </div>
+
+
     </section>
+    <div class="alert hide">
+        <span class="fas fa-exclamation-circle"></span>
+        <span class="msg">Atenção, esse horario não esta disponível!</span>
+        <div id="close" class="close-btn">
+            <span class="fas fa-times"></span>
+        </div>
+    </div>
+
+    <script>
+        $('.agendar').click(function () {
+            $('.alert').removeClass("hide");
+            $('.alert').addClass("show");
+            $('.alert').addClass("showAlert");
+            setTimeout(function () {
+                $('.alert').removeClass("show");
+                $('.alert').addClass("hide");
+            }, 5000)
+        });
+
+        $('.close-btn').click(function () {
+            $('.alert').removeClass("show");
+            $('.alert').addClass("hide");
+            console.log("clicou")
+        });
+    </script>
 
 </body>
 
