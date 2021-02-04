@@ -3,12 +3,57 @@
 
 <head>
   <meta charset="utf-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/style.css">
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
+  <style>
+    .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      background-color: #000;
+    }
+
+    .swiper-container h2 {
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 100px;
+
+      word-break: break-all;
+    }
+
+    .swiper-container .btnInscricao {
+      width: 500px;
+      font-size: 20px;
+
+      margin-top: 50px;
+      background-color: #ff4584;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+    }
+
+    @media (max-width: 680px) {
+      .swiper-container h2 {
+        padding: 14px;
+        margin-bottom: 20px;
+      }
+
+      .swiper-container .btnInscricao {
+        width: 200px;
+        margin-top: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -68,37 +113,68 @@
         <button class="btn3">Agendar</button>
       </div>
     </div>
+  </div>
 
-    
 
-    <footer>
-      <div class="footer-content">
-        <h3>AG MakeUp Artist </h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore
-          magna aliqua. </p>
-        <ul class="social">
-          <li><a href=""><i class="fab fa-facebook"></i></i></a></li>
-          <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
-          <li><a href=""><i class="fab fa-instagram"></i></i></a></li>
-        </ul>
-      </div>
-      <div class="footer-bottom">
-        <p>copyright &copy; 2021 GrowthCode.</p>
-      </div>
-    </footer>
+  <div class="swiper-container">
+    <h2>FAÇA PARTE DAS NOSSAS ALUNAS MARAVILHOSAS E ADQUIRA CONHECIMENTOS BRASICOS EM MAQUIAGEM.</h2>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-      integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
-      integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
-      crossorigin="anonymous"></script>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url(./img/img1.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./img/img2.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./img/img3.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./img/img4.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./img/img5.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./img/img6.jpg)"></div>
+    </div>
 
-    
+    <button class="btnInscricao">QUERO FAZER PARTE</button>
+  </div>
+
+
+
+
+  <footer>
+    <div class="footer-content">
+      <h3>AG MakeUp Artist </h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore
+        magna aliqua. </p>
+      <ul class="social">
+        <li><a href=""><i class="fab fa-facebook"></i></i></a></li>
+        <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+        <li><a href=""><i class="fab fa-instagram"></i></i></a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>copyright &copy; 2021 GrowthCode.</p>
+    </div>
+  </footer>
+
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 20,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      },
+      loop: true,
+      autoplay: {
+        delay: 2600,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
 </body>
 
 </html>
