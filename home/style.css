@@ -249,10 +249,11 @@ button,
     border-radius: 24px;
     cursor: pointer;
 
-    transition: border 0.2s;
+    transition: 0.5s;
 }
 
 button:hover {
+    transform: scale(1.2);
     border: 2px solid #b76e79;
     color: #b76e79;
 }

@@ -120,10 +120,12 @@ section .contentBx .formBx .inputBx input[type="submit"] {
     border: none;
     font-weight: 500;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 section .contentBx .formBx .inputBx input[type="submit"]:hover {
     background-color: #f53677;
+    transform: scale(1.2);
 }
 
 section .contentBx .formBx .remember {

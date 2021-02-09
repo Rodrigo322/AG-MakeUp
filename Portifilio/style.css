@@ -10,7 +10,6 @@
 
 body {
     font-family: montserrat;
-    background-color: #666666;
 }
 
 html,
@@ -18,7 +17,6 @@ body {
     max-width: 100%;
     overflow-x: hidden;
 }
-
 
 nav {
     background: #cf9fa6;
@@ -52,7 +50,7 @@ nav ul li a {
 }
 .link.active,
 .link:hover {
-    background: #cf9fa6;
+    /* background: #cf9fa6; */
     transition: 0.5s;
 }
 .checkbtn {
@@ -101,32 +99,12 @@ nav ul li a {
     .link:hover,
     .link.active {
         background: none;
-        color: #cf9fa6;
+        /* color: #cf9fa6; */
     }
     #check:checked ~ ul {
         left: 0;
     }
 }
-section {
-    background: url(../img/bj.jpg) no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-}
-
-@media (max-width: 680px) {
-    section {
-        background: url(../img/MobileAtualizado.jpg) no-repeat;
-        background-size: cover;
-        width: 100vw;
-        z-index: 1;
-        height: 100vh;
-
-        object-fit: cover;
-    }
-}
-
 /* FIM CSS NAVNBAR*/
 
 /* INICIO CSS CARDS E FORM*/
@@ -210,125 +188,6 @@ section {
     font-weight: 400;
 }
 
-.formRoute {
-    text-align: center;
-    width: 180px;
-    padding: 20px;
-    border-radius: 24px;
-}
-
-
-.box {
-    width: 300px;
-    padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #cf9fa6;
-    text-align: center;
-    border-radius: 24px;
-}
-.box h1 {
-    color: white;
-    text-transform: uppercase;
-    font-weight: 0;
-}
-::placeholder {
-    color: white;
-}
-.box .inputText {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 10px auto;
-    text-align: center;
-    border: 2px solid white;
-    padding: 14px 10px;
-    width: 180px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25;
-}
-.box .inputSubmit {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid white;
-    padding: 10px 30px;
-    outline: none;
-    color: #b76e79;
-    border-radius: 24px;
-    transition: 0.25;
-}
-.inputSubmit:hover {
-    background-color: white;
-    color: #b76e79;
-}
-
-.box .inputText:focus {
-    width: 250px;
-    border-color: #b76e79;
-}
-
-.modal-container {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 2000;
-
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-container.mostrar {
-    display: flex;
-}
-/* 
-@keyframes box {
-    from {
-        opacity: 0;
-        transform: translate3d(0, -20px, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-.mostrar .box {
-    animation: box .3s;
-} */
-
-.fechar {
-    position: absolute;
-    top: -7px;
-    right: -7px;
-
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
-    border: 2px solid white;
-    background-color: #b76e79;
-    color: #ffffff;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    cursor: pointer;
-
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
-}
-
 /* FIM CSS CARDS E FORM*/
 
 footer {
@@ -388,8 +247,6 @@ footer {
 
 .social a i {
     font-size: 1.1rem;
-
-    
 }
 
 .footer-bottom {

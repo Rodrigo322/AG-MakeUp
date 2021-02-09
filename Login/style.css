@@ -104,7 +104,7 @@ section .contentBx .formBx .inputBx .selactInput {
     border: 2px solid white;
     font-size: 16px;
     letter-spacing: 1px;
-    color:#f53677;
+    color: #f53677;
     background: transparent;
     border-radius: 30px;
 }
@@ -120,10 +120,12 @@ section .contentBx .formBx .inputBx input[type="submit"] {
     border: none;
     font-weight: 500;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 section .contentBx .formBx .inputBx input[type="submit"]:hover {
     background-color: #f53677;
+    transform: scale(1.2);
 }
 
 section .contentBx .formBx .remember {
@@ -140,7 +142,6 @@ section .contentBx .formBx .inputBx p {
 section .contentBx .formBx .inputBx p a {
     color: #ff4584;
 }
-
 
 /*CSS MOBILE*/
 
@@ -163,5 +164,4 @@ section .contentBx .formBx .inputBx p a {
 
         background-color: none;
     }
-
 }

@@ -12,6 +12,8 @@ body {
 
     min-height: 100vh;
     background: #232427;
+
+    overflow-x: hidden;
 }
 
 .container {
