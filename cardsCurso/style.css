@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 body {
@@ -16,6 +18,109 @@ body {
     overflow-x: hidden;
 }
 
+/*INICIO DO CSS NAVBAR*/
+nav {
+    background: #111;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+img.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    transition: 0.5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    img.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -25,6 +130,7 @@ body {
     width: 100vw;
     /* height: 100vh; */
     max-width: 1200px;
+    margin-top: 300px;
     margin: 40px 0;
     margin-bottom: 200px;
 }
@@ -39,8 +145,6 @@ body {
     border-radius: 15px;
     margin: 30px;
 }
-
-
 
 .container .card .box {
     position: absolute;
@@ -60,7 +164,7 @@ body {
 }
 
 .container .card .box::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -73,7 +177,6 @@ body {
 .container .card .box:hover {
     transform: translateY(-50px);
     box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
-
 }
 
 .container .card .box .content {
@@ -119,7 +222,7 @@ body {
 }
 
 .container .card:nth-child(1) .box .content a {
-    background:  #b76e79;
+    background: #b76e79;
 }
 
 .container .card:nth-child(2) .box .content a {
@@ -129,9 +232,6 @@ body {
 .container .card:nth-child(3) .box .content a {
     background: #b76e79;
 }
-
-
-
 
 footer {
     background-color: #111;
