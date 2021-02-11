@@ -15,17 +15,78 @@
 
 <body>
 
-    <div class="container">
-        <p class="text">Oque achou do nosso site?</p>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <img class="logo" src="ag.png" alt="Logo">
 
-        <div class="emoji">
-            <i class="fas fa-frown"></i>
-            <i class="fas fa-meh"></i>
-            <i class="fas fa-smile"></i>
-            <i class="fas fa-grin-stars"></i>
-            <i class="fas fa-grin-hearts"></i>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Agendamento</a></li>
+            <li><a href="#">Portifolio</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">FeedBack</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="container">
+
+            <div class="wrapper">
+                <p class="text">Oque achou do nosso site?</p>
+
+                <div class="emoji">
+                    <i class="fas fa-frown"></i>
+                    <i class="fas fa-meh"></i>
+                    <i class="fas fa-smile"></i>
+                    <i class="fas fa-grin-stars"></i>
+                    <i class="fas fa-grin-hearts"></i>
+                </div>
+            </div>
+
+            <textarea class="textarea" cols="30" rows="3" placeholder="Digite sua mensagem aqui"></textarea>
+            <a href="" class="linkBtn">Enviar</a>
         </div>
-    </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>AG MakeUp Artist </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna aliqua. </p>
+            <ul class="social">
+                <li><a href=""><i class="fab fa-facebook"></i></i></a></li>
+                <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy; 2021 GrowthCode.</p>
+        </div>
+    </footer>
+
+    <script>
+        const container = document.querySelector('.container')
+        const emoji = document.querySelector('.emoji')
+        const textarea = document.querySelector('textarea')
+        const linkBtn = document.querySelector('.linkBtn')
+
+
+        emoji.addEventListener('click', (e) => {
+            if (e.target.className.includes('emoji')) return;
+            textarea.classList.add('textarea--active')
+            linkBtn.classList.add('linkBtn--active')
+
+        })
+
+        container.addEventListener('mouseleave', () => {
+            textarea.classList.remove('textarea--active')
+            linkBtn.classList.remove('linkBtn--active')
+        })
+    </script>
 
 </body>
 

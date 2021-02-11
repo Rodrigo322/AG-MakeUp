@@ -1,4 +1,304 @@
-.emoji i {
-    color: blueviolet;
-    font-size: 50px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+
+    flex-direction: column;
+    overflow-x: hidden;
+
+    /* background-color: #ff7f00; */
+}
+
+/*INICIO DO CSS NAVBAR*/
+nav {
+    background: #cf9fa6;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+img.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    /* background: #cf9fa6; */
+    transition: 0.5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    img.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #b76e79;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        /* color: #cf9fa6; */
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+/*CSS CARD FEEDBACK*/
+
+@media (max-width: 860px) {
+    section {
+        height: auto;
+    }
+    section .container {
+        width: 20rem;
+    }
+    section .wrapper {
+        margin: 1rem 0;
+    }
+    section .text {
+        font-size: 2em;
+    }
+
+    section .emoji {
+        font-size: 2rem;
+    }
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width: 50rem;
+    background: #ff4584;
+    border-radius: 0.5rem;
+    overflow-x: hidden;
+
+    position: relative;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.7);
+}
+
+.wrapper {
+    margin: 2rem 0;
+}
+
+.text {
+    margin-bottom: 1rem;
+    font-size: 3em;
+    color: #fdfdfd;
+    text-align: center;
+}
+
+.emoji {
+    font-size: 6rem;
+    color: #ff7f00;
+    display: flex;
+    justify-content: center;
+}
+
+.emoji > i:not(:first-child) {
+    margin-left: 2rem;
+}
+
+.emoji > i {
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
+}
+
+.emoji > i:hover {
+    transform: scale(1.4);
+}
+
+.textarea {
+    width: 100%;
+    display: block;
+    background-color: rgb(59, 9, 59);
+    border: none;
+    resize: none;
+    outline: none;
+    color: #eee;
+    opacity: 0;
+    height: 0;
+
+    transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.textarea--active {
+    padding: 1rem;
+    opacity: 1;
+    height: 8rem;
+}
+
+.linkBtn {
+    text-decoration: none;
+    color: #eee;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    background-color: purple;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    display: none;
+}
+
+.linkBtn--active {
+    display: inline-block;
+}
+
+/*INICIO CSS FOOTER*/
+footer {
+    background-color: #111;
+    width: 100vw;
+    color: #fff;
+}
+
+@media (max-width: 680px) {
+    footer {
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.social {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.social li {
+    margin: 0 10px;
+}
+
+.social a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social a i {
+    font-size: 1.1rem;
+}
+
+.footer-bottom {
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/*FIM CSS FOOTER*/
