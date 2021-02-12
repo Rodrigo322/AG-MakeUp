@@ -142,6 +142,10 @@ a:hover {
     section .emoji {
         font-size: 2rem;
     }
+
+    section .textarea  {
+        font-size: 1em;
+    }
 }
 
 section {
@@ -154,7 +158,9 @@ section {
 }
 .container {
     width: 50rem;
-    background: #ff4584;
+    /* background: #ff4584; */
+    background: #b76e79;
+
     border-radius: 0.5rem;
     overflow-x: hidden;
 
@@ -195,8 +201,10 @@ section {
 
 .textarea {
     width: 100%;
+    font-size: 2rem;
     display: block;
-    background-color: rgb(59, 9, 59);
+    /* background-color: rgb(59, 9, 59); */
+    background-color: #cf9fa6;
     border: none;
     resize: none;
     outline: none;
