@@ -60,8 +60,27 @@
 
             </div>
         </nav>
-    </div>
 
+    </div>
+    <section class="content">
+       <div class="form-content">
+           <form action="" method="get">
+               <input type="text">
+               <input type="text">
+               <input type="text">
+               <button class="btn">Cadastrar</button>
+           </form>
+       </div>
+
+        <div class="form-content">
+            <form action="" method="get">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <button class="btn">Cadastrar</button>
+            </form>
+        </div>
+    </section>
 
     <script>
         const showNavbar = (toggleId, navId, bodyId, headerId) => {
@@ -89,16 +108,16 @@
         const linkColor = document.querySelectorAll('.nav__link')
 
         function colorLink() {
-            if(linkColor) {
+            if (linkColor) {
                 linkColor.forEach(l => l.classList.remove('active'))
                 this.classList.add('active')
             }
         }
 
-        linkColor.forEach( l => l.addEventListener('click', colorLink))
+        linkColor.forEach(l => l.addEventListener('click', colorLink))
 
 
-        
+
 
     </script>
 
