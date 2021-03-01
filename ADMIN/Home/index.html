@@ -10,7 +10,7 @@
     <title>Home | Adm AG-MAKEUP</title>
 </head>
 
-<body>
+<body id="body-pd">
     <header class="header" id="header">
         <div class="header__toggle">
             <i class='bx bx-menu' id="header-toggle"></i>
@@ -30,7 +30,7 @@
                 </a>
 
                 <div class="nav__list">
-                    <a href="#" class="nav__link">
+                    <a href="#" class="nav__link active">
                         <i class='bx bx-grid-alt nav__icon'></i>
                         <span class="nav__name">Painel de Controle</span>
                     </a>
@@ -64,13 +64,42 @@
 
 
     <script>
-        const showNavbar = (toggle, navId) => {
+        const showNavbar = (toggleId, navId, bodyId, headerId) => {
             const toggle = document.getElementById(toggleId),
-            nav = document.getElementById(navId)
+                nav = document.getElementById(navId),
+                bodypd = document.getElementById(bodyId),
+                hedaerpd = document.getElementById(headerId)
 
-            if(toggle && nav) {
+            if (toggle && nav && bodypd && hedaerpd) {
+                toggle.addEventListener('click', () => {
+                    nav.classList.toggle('show')
+
+                    toggle.classList.toggle('bx-x')
+
+                    bodypd.classList.toggle('body-pd')
+
+                    hedaerpd.classList.toggle('body-pd')
+                })
             }
         }
+
+        showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header')
+
+
+        const linkColor = document.querySelectorAll('.nav__link')
+
+        function colorLink() {
+            if(linkColor) {
+                linkColor.forEach(l => l.classList.remove('active'))
+                this.classList.add('active')
+            }
+        }
+
+        linkColor.forEach( l => l.addEventListener('click', colorLink))
+
+
+        
+
     </script>
 
 

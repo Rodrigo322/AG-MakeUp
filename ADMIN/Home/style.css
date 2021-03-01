@@ -4,6 +4,24 @@
     box-sizing: border-box;
 }
 
+/*===== VARIABLES CSS =====*/
+:root{
+    --header-height: 3rem;
+    --nav-width: 68px;
+  
+    /*===== Colors =====*/
+    --first-color: #4723D9;
+    --first-color-light: #AFA5D9;
+    --white-color: #F7F6FB;
+    
+    /*===== Font and typography =====*/
+    --body-font: 'Nunito', sans-serif;
+    --normal-font-size: 1rem;
+    
+    /*===== z index =====*/
+    --z-fixed: 100;
+}
+
 body {
     position: relative;
     margin: 3rem 0 0 0;
@@ -54,7 +72,7 @@ a {
 .l-navbar {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -30%;
     width: 68px;
     height: 100vh;
     /* background-color: #4723d9; */
@@ -107,4 +125,61 @@ a {
 
 .nav__icon {
     font-size: 1.25rem;
+}
+
+.show {
+    left: 0;
+}
+
+.body-pd{
+    padding-left: calc(var(--nav-width) + 1rem);
+}
+
+.active {
+    color: #F7F6FB;
+}
+
+.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 2px;
+    height: 32px;
+    background-color: #F7F6FB;
+}
+
+
+
+@media screen and (min-width: 768px){
+    body{
+      margin: calc(3rem + 1rem) 0 0 0;
+      padding-left: calc(68px + 2rem);
+    }
+  
+    .header{
+      height: calc(3rem + 1rem);
+      padding: 0 2rem 0 calc(68px+ 2rem);
+    }
+  
+    .header__img{
+      width: 40px;
+      height: 40px;
+    }
+  
+    .header__img img{
+      width: 45px;
+    }
+  
+    .l-navbar{
+      left: 0;
+      padding: 1rem 1rem 0 0;
+    }
+    
+    .show{
+      width: calc(68px + 156px);
+    }
+
+    .body-pd{
+      padding-left: calc(68px + 188px);
+    }
 }
