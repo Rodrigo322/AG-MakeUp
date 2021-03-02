@@ -166,47 +166,97 @@ a {
 }
 
 .content {
-    flex: 1;
-
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 .content .form-content {
-    padding-top: 100px;
-
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
-    height: 90vh;
-}
-
-.content .form-content form {
-    width: 100%;
+    /* height: 90vh; */
 
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
+    
 }
 
-.content .form-content form input {
+.content .form-content .title-form-content {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #ff4584;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.content .form-content form {
     width: 90%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    border: 2px solid #ff4584;
+    border-radius: 30px;
+    padding: 20px;
+}
+.content .form-content form .inputBx {
+    margin-bottom: 20px;
+    width: 100%;
+
+}
+
+.content .form-content form .input-grup {
+    width: 100%;
+    display: flex;
+    
+    justify-content: space-between;
+}
+
+.content .form-content form .input-grup .inputBx {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.content .form-content form .input-grup .inputBx input {
+    width: 90%;
+}
+
+
+.content .form-content form .inputBx input {
+    width: 100%;
     padding: 10px 20px;
     outline: none;
     font-weight: 400;
-    border: 2px solid #b76e79;
+    border: 1px solid #ff4584;
     /* border: 2px solid white; */
     font-size: 16px;
     letter-spacing: 1px;
     color: #ff4584;
     background: transparent;
     border-radius: 30px;
-    margin-bottom: 10px;
 }
-
+.content .form-content form .inputBx span {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #ff4584;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
 
 .content .form-content form .btn {
     width: 90%;
+    height: 50px;
     padding: 10px 20px;
     border-radius: 30px;
 
@@ -217,4 +267,22 @@ a {
     font-weight: 500;
     cursor: pointer;
     transition: 0.5s;
+}
+
+
+
+.content .list-card {
+    width: 100%;
+    border: 1px solid #ff4584;
+    margin-bottom: 20px;
+}
+
+
+.content .list-card .card {
+    width: 200px;
+    height: 200px;
+    background-color: #afa5d9;
+
+
+    border: 1px solid #ff4584;
 }
